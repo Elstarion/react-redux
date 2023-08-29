@@ -6,25 +6,27 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Posts } from "./components/Posts.jsx";
 import { New } from "./components/New.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <Posts />,
-      },
-      {
-        path: "new",
-        element: <New />,
-      },
-    ],
-  },
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <Posts />,
+        },
+        {
+          path: "new",
+          element: <New />,
+        },
+      ],
+    },
+  ],
   {
     basename: import.meta.env.DEV ? "/" : "/react-redux/",
-  },
-]);
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
