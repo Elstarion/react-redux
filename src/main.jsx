@@ -8,7 +8,7 @@ import { New } from "./components/New.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/react-redux",
+    path: "/",
     element: <App />,
     children: [
       {
